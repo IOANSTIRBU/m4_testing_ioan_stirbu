@@ -1,29 +1,28 @@
-package com.example.selenium;
+package com.example.selenium.driversTest;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+@DisplayName("Configurando el Driver de Firefox y haciendo  test")
+public class FirefoxTest {
 
-public class OperaTest {
-
-    //Driver del navegador
     WebDriver webdriver;
 
     @BeforeEach
     void setup() {
         //esta es la ruta del proyecto
         String dir = System.getProperty("user.dir");
-        String driverUrl = "/drivers/operadriver.exe";
+        String driverUrl = "/drivers/geckodriver.exe";
         String url = dir + driverUrl;
-        System.setProperty("webdriver.opera.driver", url);
-        //Driver de Google Chrome
-        webdriver = new OperaDriver();
+        System.setProperty("webdriver.gecko.driver", url);
+        //Driver de Navegador de Firefox
+        webdriver = new FirefoxDriver();
     }
 
     @AfterEach
@@ -32,13 +31,11 @@ public class OperaTest {
 
     }
 
-    @DisplayName("Abriendo pagina web de youtube solo")
+    @DisplayName("Abriendo pagina web de 3DJuegos ")
     @Test
     void abrirPagina_WebTest(){
-        webdriver.get("https://www.youtube.com/");
+        webdriver.get("https://www.3djuegos.com/");
         String title = webdriver.getTitle();
-        assertEquals("YouTube",title);
+        assertEquals("3DJuegos - Todo en videojuegos PC, PS4, Xbox, Switch, Stadia, PS5, Android",title);
     }
-
-
 }

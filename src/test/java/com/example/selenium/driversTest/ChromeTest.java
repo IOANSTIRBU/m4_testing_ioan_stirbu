@@ -1,4 +1,4 @@
-package com.example.selenium;
+package com.example.selenium.driversTest;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Configurando el Driver de  Google Chrome y haciendo algunos test")
+@DisplayName("Configurando el Driver de  Google Chrome y haciendo test")
 public class ChromeTest {
 
     //Driver del navegador
