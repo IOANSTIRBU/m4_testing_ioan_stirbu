@@ -39,7 +39,7 @@ class AddUserTest extends BaseTest {
 
         webdriver.findElement(By.xpath("//select[@id='systemUser_userType'] //option[@value='1']")).click();
 
-        webdriver.findElement(By.id("systemUser_employeeName_empName")).sendKeys("Cassidy Hope");
+        webdriver.findElement(By.id("systemUser_employeeName_empName")).sendKeys("Omotobi jomoi");
 
         webdriver.findElement(By.id("systemUser_userName")).sendKeys("ManoloFernando");
 

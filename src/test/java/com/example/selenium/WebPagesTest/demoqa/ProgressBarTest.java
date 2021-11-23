@@ -18,17 +18,18 @@ class ProgressBarTest extends BaseTest {
 
         webdriver.findElement(By.xpath("//*[@id=\"startStopButton\"]")).click();
 
-        new WebDriverWait(webdriver, Duration.ofSeconds(15))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.className("main-header")));
+        new WebDriverWait(webdriver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.attributeContains(By.className("progress-bar"), "aria-valuenow", "100"));
 
-        assertEquals("Progress Bar", webdriver.findElement(By.xpath("//*[@id=\"progressBarContainer\"]/div[1]")).getText());
+        assertEquals("100%", webdriver.findElement(By.className("progress-bar")).getText());
 
-        webdriver.findElement(By.xpath("//*[@id=\"startStopButton\"]")).click();
+        webdriver.findElement(By.xpath("//*[@id='resetButton']")).click();
 
-          new WebDriverWait(webdriver, Duration.ofSeconds(15))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.className("main-header")));
+        new WebDriverWait(webdriver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.attributeContains(By.className("progress-bar"), "aria-valuenow", "0"));
 
-        assertEquals("Progress Bar", webdriver.findElement(By.xpath("//*[@id=\"progressBarContainer\"]/div[1]")).getText());
+        assertEquals("0%", webdriver.findElement(By.className("progress-bar")).getText());
+
 
 
     }

@@ -4,7 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class BaseTest {
 
@@ -16,11 +17,11 @@ public class BaseTest {
     void setup() {
         //esta es la ruta del proyecto
         String dir = System.getProperty("user.dir");
-        String driverUrl = "/drivers/operadriver.exe";
+        String driverUrl = "/drivers/chromedriver.exe";
         String url = dir + driverUrl;
-        System.setProperty("webdriver.opera.driver", url);
+        System.setProperty("webdriver.chrome.driver", url);
         //Driver de Navegador Opera
-        webdriver = new OperaDriver();
+        webdriver = new ChromeDriver();
         js = (JavascriptExecutor) webdriver;
         webdriver.manage().window().maximize();
     }
