@@ -15,21 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
     private static final String URL = "https://opensource-demo.orangehrmlive.com/index.php/admin/viewSystemUsers";
 
-    @DisplayName("Comprobando que nos podemos loguear en la pagina web")
-    @Test
-    void loginSuccess() {
-        webdriver.get(URL);
-
-        webdriver.findElement(By.id("txtUsername")).sendKeys(USERNAME);
-
-        webdriver.findElement(By.id("txtPassword")).sendKeys(PASSWORD);
-
-        click("btnLogin");
-
-        assertEquals("System Users", webdriver.findElement(By.tagName("h1")).getText());
-    }
-
-
     @DisplayName("Comprobando que se puede completar los datos en el System Users")
     @Test
     void SystemUsersTest(){

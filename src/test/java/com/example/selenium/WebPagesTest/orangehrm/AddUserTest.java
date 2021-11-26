@@ -15,22 +15,6 @@ class AddUserTest extends BaseTest {
 
     private static final String URL = "https://opensource-demo.orangehrmlive.com/index.php/admin/saveSystemUser";
 
-
-    @DisplayName("Comprobando que nos podemos loguear en la pagina web")
-    @Test
-    void loginSuccess() {
-        webdriver.get(URL);
-
-        webdriver.findElement(By.id("txtUsername")).sendKeys(USERNAME);
-
-        webdriver.findElement(By.id("txtPassword")).sendKeys(PASSWORD);
-
-        click("btnLogin");
-
-        assertEquals("System Users", webdriver.findElement(By.tagName("h1")).getText());
-    }
-
-
     @DisplayName("Comprobando que se puede añadir un usuario correctamente")
     @Test
     void addUser(){

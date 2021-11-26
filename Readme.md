@@ -25,9 +25,9 @@ Consistirá en testear pantallas de paginas web
 
 3. En el directorio `src\test\java\com\example\selenium\WebPagesTest`
    
-a)Tenemos dos directorios:
+a)Tenemos tres directorios:
 
-    1)demoqa
+      1)demoqa
 a) BaseTest: Donde estara la configuración del driver
 
 b)DatePickerTest: Primera pantalla de test
@@ -36,7 +36,14 @@ c)FormTest: Segunda pantalla de test con un formulario
 
 d)ProgressBarTest: Tercera pantalla del test con una barra de progreso
 
-    2)orangehrm
+      2)opencart
+a)BaseTest: Donde estará la configuración del driver
+
+b)ButtonsTest: Donde estará la primera pantalla a  testear
+
+c)ListOpenCart: Donde estará la segunda pantalla a testear
+
+      3)orangehrm
 
 a)BaseTest: Donde estara la configuración del driver y el test de login
 
@@ -44,5 +51,6 @@ b)ViewSystemUsersTest: Donde estará la primera pantalla del test.
 
 c)AddUserTest: Donde estará la segunda pantalla de añadir un usuario.
 
-4) También habrá una imagen de selenium con extension png que esto servirá 
-para el FormTest para completar esta pantalla.
+
+4) También habrá una imagen de selenium con extension png que esto servirá
+   para el FormTest para completar esta pantalla.
